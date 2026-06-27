@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepDig - AI Deep Research | Xplore IT Corp</title>
+    <meta name="description" content="DeepDig by Xplore IT Corp - AI-Powered Deep Research Engine for comprehensive entity profiling.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/static/style.css?v=3">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-particles" id="bgParticles"></div>
+    <div class="bg-glow"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <!-- Premium Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="navLogo">
+                <div class="logo-icon"><i class="fas fa-atom"></i></div>
+                <span class="logo-text">Deep<span class="logo-accent">Dig</span></span>
+            </a>
+            <div class="nav-center">
+                <button class="nav-pill active" id="navHome"><i class="fas fa-home"></i> Home</button>
+                <button class="nav-pill" id="navFeatures"><i class="fas fa-bolt"></i> Features</button>
+                <button class="nav-pill" id="navChannels"><i class="fas fa-satellite-dish"></i> Channels</button>
+                <button class="nav-pill" id="navAbout"><i class="fas fa-info-circle"></i> About</button>
+            </div>
+            <div class="nav-right">
+                <button class="btn btn-nav-outline" id="btnDocs">
+                    <i class="fas fa-book"></i> Docs
+                </button>
+                <button class="btn btn-nav-gradient" id="btnStartResearch">
+                    <i class="fas fa-rocket"></i> Start Research
+                </button>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileOverlay">
+        <div class="mobile-menu-panel">
+            <button class="mobile-close" id="mobileClose"><i class="fas fa-times"></i></button>
+            <div class="mobile-nav-links">
+                <a href="#" class="mobile-nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="#features-section" class="mobile-nav-link"><i class="fas fa-bolt"></i> Features</a>
+                <a href="#channels-section" class="mobile-nav-link"><i class="fas fa-satellite-dish"></i> Channels</a>
+                <a href="#" class="mobile-nav-link"><i class="fas fa-info-circle"></i> About</a>
+                <a href="#" class="mobile-nav-link"><i class="fas fa-book"></i> Documentation</a>
+            </div>
+            <button class="btn btn-mega-gradient mobile-cta-btn" id="mobileStartBtn">
+                <i class="fas fa-rocket"></i> Start Research Now
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- ============ HERO SECTION ============ -->
+        <section id="hero-section">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Powered by Xplore IT Corp · AI Engine v3.0</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span>AI-Powered</span>
+                <span class="hero-gradient">Deep Research</span>
+                <span>Engine</span>
+            </h1>
+
+            <p class="hero-desc">
+                Compile comprehensive profiles across <strong>6+ data channels</strong> — Google, Maps, LinkedIn, YouTube, News & Website scraping — all analyzed by <strong>Groq Llama AI</strong>.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="btn btn-mega-gradient" id="heroStartBtn">
+                    <span class="btn-inner"><i class="fas fa-search"></i> Start Deep Research</span>
+                    <span class="btn-shimmer"></span>
+                </button>
+                <button class="btn btn-glass" id="heroWatchBtn">
+                    <i class="fas fa-play-circle"></i> How It Works
+                </button>
+                <button class="btn btn-outline-neon" id="heroApiBtn">
+                    <i class="fas fa-code"></i> API Access
+                </button>
+            </div>
+
+            <div class="hero-stats-bar">
+                <div class="hero-stat">
+                    <span class="hero-stat-number">6+</span>
+                    <span class="hero-stat-label">Data Channels</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">AI</span>
+                    <span class="hero-stat-label">Groq Llama 3.1</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">3</span>
+                    <span class="hero-stat-label">Export Formats</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">∞</span>
+                    <span class="hero-stat-label">Entities</span>
+                </div>
+            </div>
+
+            <!-- Quick Actions Row -->
+            <div class="quick-actions">
+                <button class="btn btn-chip" id="chipCompany"><i class="fas fa-building"></i> Company</button>
+                <button class="btn btn-chip" id="chipCollege"><i class="fas fa-university"></i> College</button>
+                <button class="btn btn-chip" id="chipStartup"><i class="fas fa-rocket"></i> Startup</button>
+                <button class="btn btn-chip" id="chipPerson"><i class="fas fa-user"></i> Person</button>
+                <button class="btn btn-chip" id="chipPlace"><i class="fas fa-map-marker-alt"></i> Place</button>
+                <button class="btn btn-chip" id="chipInstitution"><i class="fas fa-landmark"></i> Institution</button>
+                <button class="btn btn-chip" id="chipHospital"><i class="fas fa-hospital"></i> Hospital</button>
+                <button class="btn btn-chip" id="chipNGO"><i class="fas fa-hands-helping"></i> NGO</button>
+            </div>
+        </section>
+
+        <!-- ============ SEARCH SECTION ============ -->
+        <section id="search-section" class="glass-card search-card">
+            <div class="search-card-header">
+                <div class="search-header-left">
+                    <div class="search-icon-wrap"><i class="fas fa-search-plus"></i></div>
+                    <div>
+                        <h2>Start Your Research</h2>
+                        <p class="section-desc">Enter any entity name to compile deep profiles across 6 data channels.</p>
+                    </div>
+                </div>
+                <div class="search-header-btns">
+                    <button class="btn btn-icon-sm" id="btnHistory" title="Search History">
+                        <i class="fas fa-history"></i>
+                    </button>
+                    <button class="btn btn-icon-sm" id="btnBookmarks" title="Bookmarks">
+                        <i class="fas fa-bookmark"></i>
+                    </button>
+                    <button class="btn btn-icon-sm" id="btnSettings" title="Settings">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                </div>
+            </div>
+
+            <form id="search-form" class="search-box">
+                <div class="search-input-wrap">
+                    <i class="fas fa-globe search-input-icon"></i>
+                    <input type="text" id="search-input" placeholder="e.g., PSG College of Technology, Coimbatore..." required>
+                    <button type="button" class="btn btn-voice" id="btnVoice" title="Voice Search">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <button type="submit" id="search-btn" class="btn btn-search-main">
+                    <span><i class="fas fa-bolt"></i> Dig Deep</span>
+                </button>
+            </form>
+
+            <div class="search-suggestions">
+                <span class="suggestion-label">Try:</span>
+                <button class="btn btn-suggestion" data-query="Xplore IT Corp">Xplore IT Corp</button>
+                <button class="btn btn-suggestion" data-query="PSG College of Technology">PSG College</button>
+                <button class="btn btn-suggestion" data-query="Zoho Corporation">Zoho Corp</button>
+                <button class="btn btn-suggestion" data-query="IIT Madras">IIT Madras</button>
+                <button class="btn btn-suggestion" data-query="Freshworks Chennai">Freshworks</button>
+            </div>
+
+            <!-- Data Channels Toggle -->
+            <div class="channels-bar">
+                <span class="channels-label"><i class="fas fa-satellite-dish"></i> Channels:</span>
+                <button class="btn btn-channel active" data-ch="google"><i class="fab fa-google"></i> Google</button>
+                <button class="btn btn-channel active" data-ch="maps"><i class="fas fa-map"></i> Maps</button>
+                <button class="btn btn-channel active" data-ch="linkedin"><i class="fab fa-linkedin"></i> LinkedIn</button>
+                <button class="btn btn-channel active" data-ch="youtube"><i class="fab fa-youtube"></i> YouTube</button>
+                <button class="btn btn-channel active" data-ch="news"><i class="far fa-newspaper"></i> News</button>
+                <button class="btn btn-channel active" data-ch="scrape"><i class="fas fa-spider"></i> Web Scrape</button>
+            </div>
+        </section>
+
+        <!-- ============ FEATURES GRID ============ -->
+        <section id="features-section" class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fab fa-google"></i></div>
+                <h4>Google Deep Search</h4>
+                <p>SerpApi powered deep dive into organic results, snippets & knowledge graph</p>
+                <button class="btn btn-feature" id="btnLearnGoogle"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon icon-cyan"><i class="fas fa-map-marked-alt"></i></div>
+                <h4>Maps & Ratings</h4>
+                <p>Coordinates, ratings, reviews, opening hours from Google Maps Places</p>
+                <button class="btn btn-feature" id="btnLearnMaps"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon icon-pink"><i class="fab fa-linkedin"></i></div>
+                <h4>LinkedIn Intel</h4>
+                <p>Company size, industry, founders, employee count & headquarters</p>
+                <button class="btn btn-feature" id="btnLearnLinkedIn"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon icon-red"><i class="fab fa-youtube"></i></div>
+                <h4>YouTube Videos</h4>
+                <p>Related videos, channels, view counts, and content analysis</p>
+                <button class="btn btn-feature" id="btnLearnYT"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon icon-orange"><i class="far fa-newspaper"></i></div>
+                <h4>Latest News</h4>
+                <p>Recent news articles, press releases & media coverage harvesting</p>
+                <button class="btn btn-feature" id="btnLearnNews"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon icon-green"><i class="fas fa-code"></i></div>
+                <h4>Website Scraping</h4>
+                <p>Deep contact extraction — emails, phones, social links from website</p>
+                <button class="btn btn-feature" id="btnLearnScrape"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+        <!-- ============ CTA BANNER ============ -->
+        <section class="cta-banner glass-card">
+            <div class="cta-content">
+                <h3><i class="fas fa-zap"></i> Ready to dig deep?</h3>
+                <p>Get AI-powered research reports in minutes, not hours.</p>
+            </div>
+            <div class="cta-buttons">
+                <button class="btn btn-aurora" id="ctaStart"><i class="fas fa-search"></i> Research Now</button>
+                <button class="btn btn-cyber" id="ctaBulk"><i class="fas fa-list"></i> Bulk Research</button>
+                <button class="btn btn-holographic" id="ctaApi"><i class="fas fa-plug"></i> API</button>
+                <button class="btn btn-liquid" id="ctaPricing"><i class="fas fa-tags"></i> Pricing</button>
+            </div>
+        </section>
+
+        <!-- ============ DATA CHANNELS SHOWCASE ============ -->
+        <section id="channels-section" class="channels-showcase glass-card">
+            <div class="channels-header">
+                <div class="channels-header-left">
+                    <span class="section-tag"><i class="fas fa-satellite-dish"></i> Data Channels</span>
+                    <h3>6+ Sources, One Report</h3>
+                    <p class="section-desc">Every research compiles data from multiple channels into a unified AI-analyzed report.</p>
+                </div>
+                <div class="channels-header-btns">
+                    <button class="btn btn-pulse-glow" id="btnAllChannels"><i class="fas fa-th"></i> All Channels</button>
+                    <button class="btn btn-glass-sm" id="btnCustomize"><i class="fas fa-sliders-h"></i> Customize</button>
+                </div>
+            </div>
+            <div class="channels-flow">
+                <div class="flow-step flow-input"><div class="flow-icon"><i class="fas fa-keyboard"></i></div><span>Input Query</span></div>
+                <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="flow-step flow-google"><div class="flow-icon"><i class="fab fa-google"></i></div><span>Google</span></div>
+                <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="flow-step flow-maps"><div class="flow-icon"><i class="fas fa-map"></i></div><span>Maps</span></div>
+                <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="flow-step flow-linkedin"><div class="flow-icon"><i class="fab fa-linkedin"></i></div><span>LinkedIn</span></div>
+                <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="flow-step flow-youtube"><div class="flow-icon"><i class="fab fa-youtube"></i></div><span>YouTube</span></div>
+                <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="flow-step flow-ai"><div class="flow-icon"><i class="fas fa-brain"></i></div><span>AI Report</span></div>
+            </div>
+        </section>
+
+        <!-- ============ RESULTS SELECT ============ -->
+        <section id="results-select-section" class="glass-card hidden">
+            <div class="results-header">
+                <div class="results-header-left">
+                    <div class="results-icon"><i class="fas fa-list-ul"></i></div>
+                    <div>
+                        <h3>Select Specific Entity</h3>
+                        <p class="section-desc">Choose the exact entity from Google Search results to initiate full deep research:</p>
+                    </div>
+                </div>
+                <div class="results-header-btns">
+                    <button class="btn btn-icon-sm" id="btnRefreshResults" title="Refresh">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                    <button class="btn btn-icon-sm" id="btnFilterResults" title="Filter">
+                        <i class="fas fa-filter"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="search-results-list" class="results-grid"></div>
+            <div class="results-actions">
+                <button id="cancel-search-btn" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to Search</button>
+                <button class="btn btn-outline-neon" id="btnResearchAll"><i class="fas fa-layer-group"></i> Research All</button>
+            </div>
+        </section>
+
+        <!-- ============ PROGRESS / LOADING ============ -->
+        <section id="progress-section" class="glass-card hidden">
+            <div class="radar-container">
+                <div class="radar-circle"></div>
+                <div class="radar-scanner"></div>
+                <div class="radar-icon">🤖</div>
+            </div>
+            <h3 class="progress-title">Digging Across Data Channels...</h3>
+            <p class="progress-desc">Collecting raw data, scraping website details, and generating AI insights.</p>
+
+            <div class="checklist">
+                <div class="check-item" id="step-search">
+                    <span class="check-status"><i class="far fa-circle"></i></span>
+                    <span class="check-label">Google Search Deep Dive</span>
+                </div>
+                <div class="check-item" id="step-maps">
+                    <span class="check-status"><i class="far fa-circle"></i></span>
+                    <span class="check-label">Google Maps Place Coordinates & Ratings</span>
+                </div>
+                <div class="check-item" id="step-linkedin">
+                    <span class="check-status"><i class="far fa-circle"></i></span>
+                    <span class="check-label">LinkedIn Company Size & Founders</span>
+                </div>
+                <div class="check-item" id="step-youtube">
+                    <span class="check-status"><i class="far fa-circle"></i></span>
+                    <span class="check-label">YouTube Videos Fetching</span>
+                </div>
+                <div class="check-item" id="step-news">
+                    <span class="check-status"><i class="far fa-circle"></i></span>
+                    <span class="check-label">Latest News Articles Harvesting</span>
+                </div>
+                <div class="check-item" id="step-scrape">
+                    <span class="check-status"><i class="far fa-circle"></i></span>
+                    <span class="check-label">Website Deep Scraping for Contacts</span>
+                </div>
+                <div class="check-item" id="step-placement">
+                    <span class="check-status"><i class="far fa-circle"></i></span>
+                    <span class="check-label">Targeted Placement & Coordinator Search</span>
+                </div>
+                <div class="check-item" id="step-ai">
+                    <span class="check-status"><i class="far fa-circle"></i></span>
+                    <span class="check-label">Groq Llama 3.1 AI Report Summary</span>
+                </div>
+            </div>
+
+            <div class="progress-actions">
+                <button class="btn btn-secondary" id="btnCancelResearch"><i class="fas fa-times"></i> Cancel</button>
+            </div>
+        </section>
+
+        <!-- ============ REPORT ============ -->
+        <section id="report-section" class="hidden">
+            <div class="report-header glass-card">
+                <div class="entity-info">
+                    <div class="entity-icon"><i class="fas fa-building"></i></div>
+                    <div>
+                        <h2 id="report-title">Entity Name</h2>
+                        <div class="meta-badges">
+                            <span id="badge-rating" class="badge badge-rating"><i class="fas fa-star"></i> 4.5/5</span>
+                            <span id="badge-founded" class="badge"><i class="fas fa-calendar"></i> Founded: N/A</span>
+                            <span id="badge-industry" class="badge"><i class="fas fa-industry"></i> Industry</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="export-actions">
+                    <button class="btn btn-export" data-format="pdf"><i class="fas fa-file-pdf"></i> PDF</button>
+                    <button class="btn btn-export" data-format="excel"><i class="fas fa-file-excel"></i> Excel</button>
+                    <button class="btn btn-export" data-format="txt"><i class="fas fa-file-alt"></i> Text</button>
+                    <button class="btn btn-export-share" id="btnShareReport"><i class="fas fa-share-alt"></i> Share</button>
+                    <button class="btn btn-export-print" id="btnPrintReport"><i class="fas fa-print"></i> Print</button>
+                    <button id="new-search-btn" class="btn btn-primary"><i class="fas fa-plus"></i> New Research</button>
+                </div>
+            </div>
+
+            <!-- Report Action Bar -->
+            <div class="report-action-bar glass-card">
+                <button class="btn btn-action-pill active" id="btnViewChat"><i class="fas fa-robot"></i> AI Chat</button>
+                <button class="btn btn-action-pill" id="btnViewSummary"><i class="fas fa-file-alt"></i> Summary</button>
+                <button class="btn btn-action-pill" id="btnViewContacts"><i class="fas fa-address-book"></i> Contacts</button>
+                <button class="btn btn-action-pill" id="btnViewNews"><i class="far fa-newspaper"></i> News</button>
+                <button class="btn btn-action-pill" id="btnViewVideos"><i class="fab fa-youtube"></i> Videos</button>
+                <button class="btn btn-action-pill" id="btnViewRaw"><i class="fas fa-database"></i> Raw Data</button>
+                <button class="btn btn-action-pill" id="btnViewTimeline"><i class="fas fa-stream"></i> Timeline</button>
+                <button class="btn btn-action-pill" id="btnViewCompare"><i class="fas fa-columns"></i> Compare</button>
+            </div>
+
+            <!-- Chat Container -->
+            <div class="chat-container glass-card">
+                <div class="chat-main-header">
+                    <div class="chat-avatar-wrap">
+                        <span class="chat-main-avatar">🤖</span>
+                        <span class="chat-status-dot"></span>
+                    </div>
+                    <div class="chat-header-info">
+                        <h3>DeepDig AI Research Assistant</h3>
+                        <p>Ask anything about the compiled data of this entity.</p>
+                    </div>
+                    <div class="chat-header-actions">
+                        <button class="btn btn-icon-sm" id="btnClearChat" title="Clear Chat"><i class="fas fa-eraser"></i></button>
+                        <button class="btn btn-icon-sm" id="btnExportChat" title="Export Chat"><i class="fas fa-download"></i></button>
+                        <button class="btn btn-icon-sm" id="btnFullscreen" title="Fullscreen"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div id="chat-messages" class="chat-messages-area"></div>
+                <div class="chat-quick-actions">
+                    <button class="btn btn-quick-q" data-q="Summarize the key findings"><i class="fas fa-sparkles"></i> Summarize</button>
+                    <button class="btn btn-quick-q" data-q="What are the contact details?"><i class="fas fa-phone"></i> Contacts</button>
+                    <button class="btn btn-quick-q" data-q="What are the ratings and reviews?"><i class="fas fa-star"></i> Ratings</button>
+                    <button class="btn btn-quick-q" data-q="List all social media links"><i class="fas fa-share-alt"></i> Socials</button>
+                    <button class="btn btn-quick-q" data-q="What are the recent news?"><i class="far fa-newspaper"></i> News</button>
+                    <button class="btn btn-quick-q" data-q="Tell me about the founders"><i class="fas fa-users"></i> Founders</button>
+                </div>
+                <div class="chat-input-container">
+                    <form id="chat-form" class="chat-main-form">
+                        <button type="button" class="btn btn-attach" id="btnAttach" title="Attach"><i class="fas fa-paperclip"></i></button>
+                        <input type="text" id="chat-input" placeholder="Ask anything about the research data..." required autocomplete="off">
+                        <button type="button" class="btn btn-emoji" id="btnEmoji" title="Emoji"><i class="far fa-smile"></i></button>
+                        <button type="submit" id="chat-send-btn" class="btn btn-send"><i class="fas fa-paper-plane"></i> Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon"><i class="fas fa-atom"></i></div>
+                        <span class="logo-text">Deep<span class="logo-accent">Dig</span></span>
+                    </div>
+                    <p>AI-Powered Deep Research Engine by Xplore IT Corp. Compile comprehensive entity profiles in minutes.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Product</h5>
+                    <a href="#"><i class="fas fa-search"></i> Research</a>
+                    <a href="#"><i class="fas fa-file-export"></i> Export</a>
+                    <a href="#"><i class="fas fa-code"></i> API</a>
+                    <a href="#"><i class="fas fa-tags"></i> Pricing</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Xplore IT Corp</h5>
+                    <a href="http://www.xploreitcorp.com/" target="_blank"><i class="fas fa-globe"></i> Website</a>
+                    <a href="#"><i class="fas fa-graduation-cap"></i> Courses</a>
+                    <a href="#"><i class="fas fa-briefcase"></i> Careers</a>
+                    <a href="#"><i class="fas fa-phone"></i> Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Connect</h5>
+                    <div class="footer-social-btns">
+                        <a href="https://www.facebook.com/xploreitcorp/" target="_blank" class="btn btn-social-sm"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/xploreitcorp/" target="_blank" class="btn btn-social-sm"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/xic-ltd/" target="_blank" class="btn btn-social-sm"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/channel/UCKkXw6V4V2y6X2uKZyV8V" target="_blank" class="btn btn-social-sm"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="btn btn-social-sm"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                    <p class="footer-contact"><i class="fas fa-phone"></i> +91 90470 20807</p>
+                    <p class="footer-contact"><i class="fas fa-envelope"></i> info@xploreitcorp.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 DeepDig by Xplore IT Corp — Xplore Intellects Pvt Ltd. All rights reserved.</p>
+                <div class="footer-bottom-btns">
+                    <button class="btn btn-footer-link" id="btnPrivacy">Privacy</button>
+                    <button class="btn btn-footer-link" id="btnTerms">Terms</button>
+                    <button class="btn btn-footer-link" id="btnSupport">Support</button>
+                    <button class="btn btn-back-top" id="btnBackTop"><i class="fas fa-arrow-up"></i></button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ FAB (Floating Action Buttons) ============ -->
+    <div class="fab-container" id="fabContainer">
+        <button class="fab fab-main" id="fabMain"><i class="fas fa-plus"></i></button>
+        <button class="fab fab-item fab-whatsapp" id="fabWhatsApp" title="WhatsApp"><i class="fab fa-whatsapp"></i></button>
+        <button class="fab fab-item fab-call" id="fabCall" title="Call"><i class="fas fa-phone-alt"></i></button>
+        <button class="fab fab-item fab-email" id="fabEmail" title="Email"><i class="fas fa-envelope"></i></button>
+        <button class="fab fab-item fab-search" id="fabSearch" title="Quick Search"><i class="fas fa-search"></i></button>
+    </div>
+
+    <script src="/static/app.js?v=3"></script>
+</body>
+</html>
